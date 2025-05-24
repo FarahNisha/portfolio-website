@@ -35,7 +35,7 @@ nav h1 {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2.0 rem;
   margin: 0;
 }
 
@@ -63,7 +63,7 @@ nav ul li a:hover {
 }
 
 .hero p {
-  font-size: 1.25rem;
+  font-size: 1.0rem;
 }
 
 /* Footer */
@@ -165,8 +165,8 @@ nav ul li a:hover {
 }
 
 .about-image img {
-  width: 180px;
-  border-radius: 50%;
+  width: 300px;
+  border-radius: 60%;
   border: 3px solid var(--maroon);
 }
 
@@ -174,7 +174,7 @@ nav ul li a:hover {
 footer {
   background-color: var(--white);
   text-align: center;
-  padding: 1rem;
+  padding: 3rem;
   border-top: 1px solid var(--border);
   font-size: 0.9rem;
   color: #666;
@@ -262,16 +262,24 @@ footer {
 }
 
 
+
 .resume-container {
   max-width: 1000px;
   margin: 2rem auto;
-  padding: 2rem;
-  background-color: var(--white);
+  padding: 3rem;
+  background-color: var(--cream);
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Left column */
+.left-column {
+  flex: 1;
+  min-width: 300px;
+}
+
 .resume-container h2 {
+  align-items: flex-start;
   text-align: center;
   color: var(--maroon);
   margin-bottom: 2rem;
@@ -280,22 +288,30 @@ footer {
 .resume-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .resume-section h3 {
   color: var(--maroon);
   margin-bottom: 0.5rem;
+  
 }
 
 .resume-section p,
 .resume-section ul {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.0;
 }
 
 .resume-section ul {
-  padding-left: 1.2rem;
+  padding-left: 1.0rem;
+}
+
+.certificate-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds space between buttons */
+  margin-top: 20px;
 }
 
 footer {
@@ -303,10 +319,75 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  color: #666;
-  border-top: 1px solid var(--border);
+  color: #ed3c3c;
+  border-top: 10px solid var(--border);
 }
 
+/* Right column */
+.right-column {
+  flex: 0 0 350px;
+}
+
+body {
+  background-color: var(--maroon);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--maroon);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.resume-section {
+  background-color: var(--white);
+  border: 3px solid var(--cream);
+  border-radius: 20px;
+  padding:40px 30px;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-left: 30px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+/* responsive */ 
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.view-btn,
+.download-btn {
+  background-color: var(--maroon);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.view-btn:hover,
+.download-btn:hover {
+  background-color: #5a0000;
+}
 
 :root {
   --cream: #fdf6e3;
@@ -437,6 +518,7 @@ footer {
   border-top: 1px solid var(--border);
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   .contact-flex {
     flex-direction: column;
@@ -446,5 +528,44 @@ footer {
     order: -1;
     padding: 1rem;
   }
+}
+
+.social-media {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.social-media h3 {
+  color: var(--maroon);
+  margin-bottom: 1rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.icons img {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border: 2px solid var(--maroon);
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid var(--border);
 }
 
